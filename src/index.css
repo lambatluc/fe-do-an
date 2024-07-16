@@ -88,6 +88,9 @@ input:focus, textarea:focus, select:focus{
 .zIndex {
   z-index: 1000;
 }
+.linear-bg {
+  background: linear-gradient(269.82deg, #07091c00 0.17%, #080a1ad6 99.87%);
+}
   @layer base {
     * {
       @apply border-border;
