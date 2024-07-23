@@ -6,4 +6,5 @@ export interface ILiveStream {
     titleImage: string
     categories: string
     view: number
+    rating: number
   }

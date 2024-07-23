@@ -5,7 +5,7 @@ import { useFetchData } from "./hooks/useFetchData";
 import FlexLiveStreamItem from "../FlexLiveStreamItem";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
-import { Heart } from "lucide-react";
+import { FaHeart } from "react-icons/fa";
 const Banner = () => {
   const { data } = useFetchData();
   useEffect(() => {
@@ -47,7 +47,7 @@ const Banner = () => {
                   Watch
                 </Link>
                 <Button className="bg-white hover:text-subMain transitions text-white px-4 py-3 rounded text-sm bg-opacity-30">
-                  <Heart />
+                  <FaHeart />
                 </Button>
               </div>
             </div>

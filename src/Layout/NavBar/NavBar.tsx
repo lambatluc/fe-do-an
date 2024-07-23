@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Search } from "lucide-react";
-import { Heart } from 'lucide-react';
+import { FaHeart } from "react-icons/fa";
 import { User } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 const NavBar = () => {
@@ -46,7 +46,7 @@ const NavBar = () => {
               <User className="w-8 h-8"/>
             </NavLink>
             <NavLink to='/favorites' className={`${Hover} relative`}>
-              <Heart className="w-6 h-6"/>
+              <FaHeart className="w-6 h-6"/>
               <div className="w-5 h-5 flex-colo rounded-full text-xs bg-subMain text-white absolute -top-5 -right-1">
                 3
               </div>
