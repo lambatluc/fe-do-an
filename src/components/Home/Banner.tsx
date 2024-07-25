@@ -1,19 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { useFetchData } from "./hooks/useFetchData";
+import useFetchData from "../hooks/useFetchData";
 import FlexLiveStreamItem from "../FlexLiveStreamItem";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { FaHeart } from "react-icons/fa";
 const Banner = () => {
   const { data } = useFetchData();
-  useEffect(() => {
-    // Thực hiện hành động khi data thay đổi
-    if (data.length > 0) {
-      console.log("Data has changed:", data);
-    }
-  }, [data]);
   return (
     <div className="relative w-full">
       <Swiper
@@ -25,7 +19,7 @@ const Banner = () => {
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         className="w-full xl:h-96 bg-dry lg:h-64 h-48"
       >
-        {data.slice(0, 6).map((livestream, index) => (
+        {data && data.slice(0, 6).map((livestream, index) => (
           <SwiperSlide key={index} className="relative rounded overflow-hidden">
             <img
               src={`/images/livestream/${livestream.titleImage}`}

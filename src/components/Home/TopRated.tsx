@@ -4,7 +4,7 @@ import { BookmarkCheck } from "lucide-react";
 import { FaHeart } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
-import { useFetchData } from "./hooks/useFetchData";
+import useFetchData from "../hooks/useFetchData";
 import { Link } from "react-router-dom";
 import Rating from "../Stars";
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
@@ -14,7 +14,8 @@ const TopRated = () => {
   const { data } = useFetchData();
   const [nextEl, setNextEl] = useState<HTMLButtonElement | null>(null);
   const [prevEl, setPrevEl] = useState<HTMLButtonElement | null>(null);
-  const classNames = 'hover:bg-dry transitions text-sm rounded w-8 h-8 flex-colo bg-subMain text-white';
+  const classNames =
+    "hover:bg-dry transitions text-sm rounded w-8 h-8 flex-colo bg-subMain text-white";
   return (
     <div className="my-16">
       <Titles title="Top Rated" Icon={BookmarkCheck} />
@@ -28,7 +29,7 @@ const TopRated = () => {
           loop={true}
           modules={[Navigation, Autoplay]}
         >
-          {data.map((livestream, index) => (
+          { data && data.map((livestream, index) => (
             <SwiperSlide key={index}>
               <div className="p-4 h-rate hovered border border-border bg-dry rounded-lg overflow-hidden">
                 <img
@@ -47,7 +48,7 @@ const TopRated = () => {
                     {livestream.streamerName}
                   </Link>
                   <div className="flex gap-2 text-star">
-                    <Rating value={livestream.rating}/>
+                    <Rating value={livestream.rating} />
                   </div>
                 </div>
               </div>
@@ -56,10 +57,10 @@ const TopRated = () => {
         </Swiper>
         <div className="w-full px-1 flex-rows gap-6 pt-12">
           <Button className={classNames} ref={(node) => setPrevEl(node)}>
-            <BsCaretLeftFill/>
+            <BsCaretLeftFill />
           </Button>
           <Button className={classNames} ref={(node) => setNextEl(node)}>
-            <BsCaretRightFill/>
+            <BsCaretRightFill />
           </Button>
         </div>
       </div>

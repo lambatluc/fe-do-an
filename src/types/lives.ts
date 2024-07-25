@@ -8,3 +8,7 @@ export interface ILiveStream {
     view: number
     rating: number
   }
+export interface ICategory {
+  id: string
+  title: string
+}
