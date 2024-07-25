@@ -5,7 +5,6 @@ export interface ILiveStream {
     title: string
     titleImage: string
     categories: string
-    view: number
     rating: number
   }
 export interface ICategory {

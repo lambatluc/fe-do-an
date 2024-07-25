@@ -19,7 +19,7 @@ const Banner = () => {
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         className="w-full xl:h-96 bg-dry lg:h-64 h-48"
       >
-        {data && data.slice(0, 6).map((livestream, index) => (
+        {data?.slice(0, 6).map((livestream, index) => (
           <SwiperSlide key={index} className="relative rounded overflow-hidden">
             <img
               src={`/images/livestream/${livestream.titleImage}`}

@@ -1,10 +1,8 @@
-import { LucideProps } from "lucide-react";
 import React from "react";
+import { IconType } from "react-icons";
 interface IProps {
   title: string;
-  Icon: React.ForwardRefExoticComponent<
-    Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
-  >;
+  Icon: IconType;
 }
 const Titles = ({ title, Icon }: IProps) => {
   return (
