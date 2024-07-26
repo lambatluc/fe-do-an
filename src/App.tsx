@@ -7,6 +7,7 @@ import NotFound from "./Screens/NotFound";
 import ContactUs from "./Screens/ContactUs";
 import LivesPage from "./Screens/LiveStreams";
 import SingleLive from "./Screens/SingleLive";
+import Login from "./Screens/Login";
 const queryClient = new QueryClient();
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/lives" element={<LivesPage />} />
         <Route path="/live/:id" element={<SingleLive />} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </QueryClientProvider>
