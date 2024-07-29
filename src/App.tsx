@@ -8,8 +8,12 @@ import ContactUs from "./Screens/ContactUs";
 import LivesPage from "./Screens/LiveStreams";
 import SingleLive from "./Screens/SingleLive";
 import Login from "./Screens/Login";
+import Register from "./Screens/Register";
+import Profile from "./Screens/Dashboard/Profile";
+import Aos from "aos";
 const queryClient = new QueryClient();
 function App() {
+  Aos.init();
   return (
     <QueryClientProvider client={queryClient}>
       <Routes>
@@ -19,6 +23,8 @@ function App() {
         <Route path="/lives" element={<LivesPage />} />
         <Route path="/live/:id" element={<SingleLive />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </QueryClientProvider>
