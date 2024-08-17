@@ -14,7 +14,7 @@ const FavoritesStreams = () => {
             Delete All
           </button>
         </div>
-        <Table data={data} admin={false}/>
+        <Table data={data} admin={true}/>
       </div>
     </SideBar>
   );

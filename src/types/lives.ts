@@ -7,6 +7,8 @@ export interface ILiveStream {
     categories: string
     rating: number
     national: string
+    follower: number
+    level: number
   }
 export interface ICategory {
   id: string
