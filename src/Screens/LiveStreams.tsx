@@ -31,7 +31,7 @@ const LivesPage = () => {
             onClick={HandleLoadingMore}
             className="flex-rows gap-3 text-white py-3 px-8 rounded font-semibold border-2 border-subMain"
           >
-            Loading More <CgSpinner className="animate-spin" />
+            Loading More <CgSpinner className="animate-spin"/>
           </button>
         </div>
       </div>
