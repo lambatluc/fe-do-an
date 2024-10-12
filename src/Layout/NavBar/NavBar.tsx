@@ -5,13 +5,13 @@ import { FaHeart } from "react-icons/fa";
 import { User } from "lucide-react";
 import { cn } from "@/lib/utils";
 const NavBar = () => {
-  const hover = "hover: text-subMain transitions text-white";
+  const hover = "hover:text-subMain transitions text-white";
   const Hover = ({ isActive }: any) => (isActive ? "text-subMain" : hover);
   const [focus, setFocus] = useState(false);
   return (
     <>
-      <div className="backdrop-blur-xl shadow-md sticky top-0 z-20">
-        <div className="container py-6 px-2 lg:grid gap-10 grid-cols-5 justify-between items-center">
+      <div className="backdrop-blur-xl bg-opacity-100 shadow-md sticky top-0 z-20">
+        <div className="container py-4 h-20 px-2 lg:grid gap-10 grid-cols-5 justify-between items-center">
           <div className="col-span-1 lg:block hidden">
             <Link to="/">
               <img
@@ -28,7 +28,7 @@ const NavBar = () => {
             )}
             onFocus={() => setFocus(true)}
           >
-            <Search className="w-4 h-4 absolute top-1/2 transform -translate-y-1/2 left-3" />
+            <Search className="w-4 h-4 absolute top-1/2 transform -translate-y-1/2 left-4" />
             <input
               placeholder="Search..."
               className={cn(

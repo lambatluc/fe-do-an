@@ -15,10 +15,10 @@ const FlexLiveStreamItem = ({livestream}: IProps) => {
         <CirclePlay className='text-subMain w-3 h-3'/>
         <span className='font-medium text-sm'>{livestream?.createdAt}</span>
       </div>
-      <div className='flex items-center gap-2'>
+      {/* <div className='flex items-center gap-2'>
         <Clock className='text-subMain w-3 h-3'/>
         <span className='font-medium text-sm'>15 minutes ago</span>
-      </div>
+      </div> */}
     </>
   )
 }
